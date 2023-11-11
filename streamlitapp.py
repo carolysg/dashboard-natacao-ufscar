@@ -62,7 +62,7 @@ ano_atleta = st.sidebar.selectbox('$\sf \large{Ano}$', ano)
 if ano_atleta == 'Todos':
     piscina = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)]['Piscina'].unique()
 else:
-    piscina = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Data'].dt.year==int(ano_atleta))]['Piscina'].unique()
+    piscina = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Data'].datetime.dt.year==int(ano_atleta))]['Piscina'].unique()
 piscina_atleta = st.sidebar.selectbox('$\sf \large{Piscina}$', piscina, )
 st.sidebar.markdown('#')
 st.sidebar.markdown('#')
