@@ -131,5 +131,3 @@ fig.update_layout(
 )
 # fig.add_vline(x=pd.to_datetime('2023-07-01'), line_width=3, line_color="blue") # Início dos treinos com Colombo
 st.plotly_chart(fig)
-
-
