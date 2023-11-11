@@ -112,7 +112,7 @@ fig.update_traces(mode="markers+lines", line=dict(color="#DD0000", width=4),
 fig.update_xaxes(
     title='Data',
     # ticktext=df_atleta['Data'].apply(lambda x: x.strftime('%m/%y')),
-    ticktext=df_atleta['Data'].apply(lambda x: x.strftime('%b/%y')),
+    ticktext=df_atleta['Data'].apply(lambda x: x.strftime('%d/%m/%y')),
     # ticktext=df_atleta['Data'],
     tickvals=df_atleta['Data'],
     tickfont = dict(size=18, color='white'), 
