@@ -78,7 +78,7 @@ st.subheader(f'Prova: {prova_atleta}')
 if ano_atleta == 'Todos':
     df_atleta = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Piscina']==piscina_atleta)]
 else:
-    df_atleta = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Piscina']==piscina_atleta)&(df['Data'].apply(lambda x: x.year)==int(ano_atleta))]
+    df_atleta = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Piscina']==piscina_atleta)&(df['Data'].datetime.dt.year==int(ano_atleta))]
 df_atleta = df_atleta.sort_values(by = 'Data')
 df_display = df_atleta.rename(columns={'Tempo_str': 'Tempo oficial'})
 
