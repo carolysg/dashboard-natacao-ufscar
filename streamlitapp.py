@@ -64,6 +64,7 @@ if ano_atleta == 'Todos':
 else:
     piscina = df[(df['Nome']==atleta)&(df['Prova']==prova_atleta)&(df['Data'].dt.year==int(ano_atleta))]['Piscina'].unique()
 piscina_atleta = st.sidebar.selectbox('$\sf \large{Piscina}$', piscina, )
+st.sidebar.text('Criado por: Carol Yumi e Gui Messias')
 
 # Title, header, subheader
 st.title('Natação UFSCar - Análise de resultados')
